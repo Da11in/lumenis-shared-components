@@ -4,14 +4,21 @@ export const config: Config = {
   namespace: 'lumenis-shared-components',
   outputTargets: [
     {
+      type: 'dist',
+      esmLoaderPath: '../loader',
+    },
+    {
       type: 'dist-custom-elements',
-      generateTypeDeclarations: true,
+    },
+    {
+      type: 'docs-readme',
+    },
+    {
+      type: 'www',
+      serviceWorker: null, // disable service workers
     },
   ],
   testing: {
-    browserHeadless: 'new',
-  },
-  extras: {
-    enableImportInjection: true,
+    browserHeadless: "new",
   },
 };

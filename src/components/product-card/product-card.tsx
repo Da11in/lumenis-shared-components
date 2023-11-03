@@ -1,8 +1,8 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: 'product-list-card',
-  styleUrl: 'product-list-card.css',
+  tag: "product-card",
+  styleUrl: "product-card.css",
   shadow: true,
 })
 export class ProductListCard {

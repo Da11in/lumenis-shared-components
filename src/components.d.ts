@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ProductListCard {
+    interface ProductCard {
         "code": string;
         "description": string;
         "image": string;
@@ -18,18 +18,18 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLProductListCardElement extends Components.ProductListCard, HTMLStencilElement {
+    interface HTMLProductCardElement extends Components.ProductCard, HTMLStencilElement {
     }
-    var HTMLProductListCardElement: {
-        prototype: HTMLProductListCardElement;
-        new (): HTMLProductListCardElement;
+    var HTMLProductCardElement: {
+        prototype: HTMLProductCardElement;
+        new (): HTMLProductCardElement;
     };
     interface HTMLElementTagNameMap {
-        "product-list-card": HTMLProductListCardElement;
+        "product-card": HTMLProductCardElement;
     }
 }
 declare namespace LocalJSX {
-    interface ProductListCard {
+    interface ProductCard {
         "code"?: string;
         "description"?: string;
         "image"?: string;
@@ -40,14 +40,14 @@ declare namespace LocalJSX {
         "unitsInPack"?: number;
     }
     interface IntrinsicElements {
-        "product-list-card": ProductListCard;
+        "product-card": ProductCard;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "product-list-card": LocalJSX.ProductListCard & JSXBase.HTMLAttributes<HTMLProductListCardElement>;
+            "product-card": LocalJSX.ProductCard & JSXBase.HTMLAttributes<HTMLProductCardElement>;
         }
     }
 }
